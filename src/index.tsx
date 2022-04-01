@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-
+import VideoList from './components/VideoList'
 ReactDOM.render(
   <React.StrictMode>
-    <h1>hello world</h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<VideoList/>}/>
+    </Routes>
+    
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
